@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Google Sans Flex', 'Roboto', system-ui, sans-serif;
+  --color-primary: #3b6939;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #bcf0b4;
+  --color-on-primary-container: #002204;
+  --color-secondary-container: #d7e8cd;
+  --color-on-secondary-container: #111f0f;
+  --color-tertiary: #e2742b;
+  --color-tertiary-container: #ffdbc8;
+  --color-on-tertiary-container: #311300;
+  --color-surface: #f8fbf1;
+  --color-surface-low: #f2f5eb;
+  --color-surface-high: #e6e9e0;
+  --color-surface-highest: #e1e4da;
+  --color-on-surface: #191d17;
+  --color-on-surface-variant: #424940;
+  --color-outline: #72796f;
+  --color-outline-variant: #c2c8bd;
+  --color-error: #ba1a1a;
+}
+
+html, body { background: var(--color-surface); color: var(--color-on-surface); }
+body { font-family: var(--font-sans); -webkit-tap-highlight-color: transparent; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .45s cubic-bezier(.2,0,0,1) both; }
+@keyframes pop { 0% { transform: scale(.6); opacity: 0; } 70% { transform: scale(1.08); } 100% { transform: scale(1); opacity: 1; } }
+.pop { animation: pop .5s cubic-bezier(.2,0,0,1) both; }
